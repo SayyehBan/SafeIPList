@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SafeIPList.Models;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace SafeIPList.Controllers
 {
@@ -13,10 +14,17 @@ namespace SafeIPList.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
+            var ipAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString();
+
+            ViewData["IpAddress"] = "My IP : "+ipAddress;
+
+
             return View();
         }
+
+
 
         public IActionResult Privacy()
         {

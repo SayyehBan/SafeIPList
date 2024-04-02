@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="SayyehBanTools">
+      <HintPath>..\..\..\..\..\..\..\SayyehBan\Dll\SayyehBanTools\SayyehBanTools\bin\Debug\net8.0\SayyehBanTools.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
